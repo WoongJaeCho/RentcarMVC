@@ -12,10 +12,9 @@ public class Rentcar {
 	private String info;
 	
 	public Rentcar() {}
-	public Rentcar(int no, String name, int category, int price, int usepeople, int totalQty, String company,
+	public Rentcar(String name, int category, int price, int usepeople, int totalQty, String company,
 			String img, String info) {
 		super();
-		this.no = no;
 		this.name = name;
 		this.category = category;
 		this.price = price;

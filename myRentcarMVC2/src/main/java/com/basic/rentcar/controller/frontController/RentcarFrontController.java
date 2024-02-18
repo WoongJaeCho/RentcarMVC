@@ -17,11 +17,11 @@ public class RentcarFrontController extends HttpServlet {
        
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-   
+   System.out.println(req.getParameter("id"));
     	String url = req.getRequestURI();
     	String ctx = req.getContextPath();
-    	
     	String command = url.substring(ctx.length());
+    	System.out.println("command = "+command);
     	
     	Controller controller = null;
     	String nextPage = null;

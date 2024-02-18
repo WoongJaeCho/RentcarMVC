@@ -5,6 +5,7 @@ import java.io.IOException;
 
 
 import com.basic.rentcar.controller.frontController.Controller;
+import com.basic.rentcar.controller.util.Util;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,8 +23,8 @@ public class LogoutController implements Controller {
 		session.removeAttribute("id");
 		
 		req.removeAttribute("center");
-		
-		return "main";
+		Util.getInstance().alertAndGo(res, "로그아웃 완료", "main");
+		return null;
 	}
 
 }

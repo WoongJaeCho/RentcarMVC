@@ -3,6 +3,7 @@ package com.basic.rentcar.controller.VO;
 public class joinCarView {
 	private int reserveSeq;	
 	private int no; // car no 
+	private String id;
 	private String name;
 	private int price;
 	private String img;
@@ -13,6 +14,7 @@ public class joinCarView {
 	private int usewifi;
 	private int useseat;
 	private int usenavi;
+	
 	public int getReserveSeq() {
 		return reserveSeq;
 	}
@@ -24,6 +26,12 @@ public class joinCarView {
 	}
 	public void setNo(int no) {
 		this.no = no;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;

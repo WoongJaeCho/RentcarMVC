@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div align="center">
 	<form action="" method="post"> 
 		<table border="1">
 			<tr height="100">
@@ -29,5 +30,6 @@
 			</tr>
 		</table>
 	</form>
+</div>
 </body>
 </html>

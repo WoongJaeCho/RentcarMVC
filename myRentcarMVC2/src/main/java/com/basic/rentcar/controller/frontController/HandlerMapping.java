@@ -2,12 +2,17 @@ package com.basic.rentcar.controller.frontController;
 
 import java.util.HashMap;
 
-import com.basic.rentcar.controller.car.CarImgUploadController;
+import com.basic.rentcar.controller.admin.CarImgUploadController;
+import com.basic.rentcar.controller.admin.CarInsertController;
+import com.basic.rentcar.controller.admin.CarUpdateController;
+import com.basic.rentcar.controller.admin.adminDeleteUserController;
+import com.basic.rentcar.controller.admin.adminUserListController;
+import com.basic.rentcar.controller.admin.allCarListController;
 import com.basic.rentcar.controller.car.CarInfoController;
-import com.basic.rentcar.controller.car.CarInsertController;
 import com.basic.rentcar.controller.car.CarListController;
 import com.basic.rentcar.controller.car.CarSelectOptionController;
-import com.basic.rentcar.controller.reservate.ReservateCarController;
+import com.basic.rentcar.controller.car.ReservateCarController;
+import com.basic.rentcar.controller.car.ReservationResultController;
 import com.basic.rentcar.controller.reservate.ReservateDeleteController;
 import com.basic.rentcar.controller.reservate.ReservateUserListController;
 import com.basic.rentcar.controller.user.DeleteController;
@@ -41,15 +46,25 @@ public class HandlerMapping {
 		// car
 		mappings.put("/carInfo.do", new CarInfoController());
 		mappings.put("/carList.do", new CarListController());
-		mappings.put("/carInfo.do", new CarInsertController());
 		mappings.put("/carSelectOption.do", new CarSelectOptionController());
-		mappings.put("/carSelectOption.do", new CarImgUploadController());
+		mappings.put("/reservateCar.do", new ReservateCarController());
+		mappings.put("/reservationResult.do", new ReservationResultController());
 		
 		// reservate
-		mappings.put("/reservateCar.do", new ReservateCarController());
 		mappings.put("/reservateDelete.do", new ReservateDeleteController());
 		mappings.put("/reservateUserList.do", new ReservateUserListController());
 		
+		
+		//admin
+		mappings.put("/allCarList.do", new allCarListController());
+		mappings.put("/carUpdate.do", new CarUpdateController());
+		mappings.put("/carInsert.do", new CarInsertController());
+		mappings.put("/carImgUpload.do", new CarImgUploadController());
+		mappings.put("/adminUserList.do", new adminUserListController());
+		mappings.put("/adminDeleteUser.do", new adminDeleteUserController());
+		
+		//fileupload
+		//mappings.put("/uploadProcess.do", new UploadProcess());
 	}
 	
 	public Controller getController(String key) {

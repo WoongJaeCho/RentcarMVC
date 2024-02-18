@@ -8,5 +8,7 @@
 </head>
 <body>
 
+<img id="logo" alt="" src="./IMG/main.png" width="1200">
+
 </body>
 </html>

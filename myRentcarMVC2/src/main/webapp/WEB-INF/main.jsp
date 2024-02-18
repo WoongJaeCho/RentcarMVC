@@ -19,9 +19,10 @@
 	<!-- center -->
 	
 	<tr><td>
-	<c:if test="${ !center }">
+	<c:if test="${ center eq null }">
 	<jsp:include page="./parts/center.jsp"/>
 	</c:if>
+	
 	<c:if test="${ center ne null }">
 	<jsp:include page="./${ center }.jsp"/>
 	</c:if>

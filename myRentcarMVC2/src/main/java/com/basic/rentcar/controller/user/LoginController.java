@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import com.basic.rentcar.controller.DAO.UserDAO;
 import com.basic.rentcar.controller.frontController.Controller;
+import com.basic.rentcar.controller.util.Util;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -26,8 +27,9 @@ public class LoginController implements Controller {
 		
 		if(idx == 0) {
 			req.setAttribute("center", "user/login");
-			System.out.println("로그인 안됨");
+			Util.getInstance().alertAndBack(res, "아이디 또는 비밀번호를 확인하세요");
 		} else {
+			Util.getInstance().alertAndGo(res, "로그인 완료", "main");
 			System.out.println("로그인 됨");
 			HttpSession session = req.getSession();
 			session.setAttribute("log", idx);
@@ -35,7 +37,7 @@ public class LoginController implements Controller {
 			req.removeAttribute("center");
 		}
 		
-		return "main";
+		return null;
 	}
 
 }
