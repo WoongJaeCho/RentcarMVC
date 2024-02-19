@@ -72,7 +72,7 @@
 						<input type="hidden" name="img" value="${ car.img }" /> 
 						<input type="submit" value="옵션선택후 렌트 예약 하기" />
 					</c:if>	
-					<c:if test="${ log eq null }" >
+					<c:if test="${ log eq null and car.totalQty ne 0}" >
 						<%-- 이전 차량에 관한 정보 --%> 
 						<p>로그인 후 예약 가능</p>
 					</c:if>	

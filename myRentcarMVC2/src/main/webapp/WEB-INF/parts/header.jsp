@@ -6,11 +6,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="./css/style.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<div align="center">
+<div class="header">
 	<form>
 	<table align="center" width="1200">
 		<tr align="center">
@@ -36,7 +37,7 @@
 			</td>		
 		</tr>
 		
-		<tr align="center">
+		<tr class="menu" align="center">
 			<td>
 			<c:if test="${ id ne 'admin' }">
 			<a href="/myRentcarMVC2/reservateCar.do"> 예 약 </a>	

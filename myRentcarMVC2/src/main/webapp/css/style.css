@@ -1,1 +1,18 @@
 @charset "UTF-8";
+
+body{
+	background-color: beige;
+	width: 100vw;
+}
+.header{
+	margin: auto;
+}
+.menu{
+
+	height: 40px;
+	padding: 5px;
+}
+#logo{
+	/*filter: invert();*/
+}
+

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table width="1200">
+	<table margin="auto" width="100%">
 		<tr height="100">
 			<td align="center">
 				<hr color="red" size="3">
